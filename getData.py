@@ -8,8 +8,9 @@ class getData:
     self.licenseNo = licenseNo
     self.dob = dob
 
-  def authentiCate(self, soupData):
-    if (soupData.find('No DL Details Found....') == -1): #this message is showed only when details are wrong
+  def authentiCate(self, tableList):
+    if len(tableList) < 4:
+      print("Wrong DOB or License number. Please try again")
       return False
     return True
 
@@ -31,10 +32,10 @@ class getData:
     formData['javax.faces.ViewState'] = viewStateCode #viewState code is unique everytime, get new from each session
     response = session.post(url, data = formData) #request works without captcha, get_captcha() not needed
     responseData = BeautifulSoup(response.text, features='lxml')
-    authentication = self.authentiCate(responseData)
+    tableList = responseData.find_all('table')
+    authentication = self.authentiCate(tableList)
     if authentication:  
       try:
-        tableList = responseData.find_all('table')
         jsonData = extractData(tableList).getJSON()
         return jsonData
       except Exception as error:
