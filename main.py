@@ -14,9 +14,11 @@ args = parser.parse_args()
 licenseNo = args.licenseNo
 dob = args.dob
 outputFile = args.output
-
-response = getData(licenseNo = licenseNo, dob = dob).scrapeData()
-if response:
-  with open(outputFile, 'w') as output:
-    json.dump(response, output)
-    print("Driver Details Successfully stored in ", outputFile)
+if(not (len(dob) == 10 and dob.count('-') == 2)):
+  print("Wrong DOB, please write again in dd-mm-yyyy format")
+else:
+  response = getData(licenseNo = licenseNo, dob = dob).scrapeData() #creating object of self created class
+  if response:
+    with open(outputFile, 'w') as output:
+      json.dump(response, output, indent=1)
+      print("Driver Details Successfully stored in ", outputFile)

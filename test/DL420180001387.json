@@ -1,15 +1,15 @@
 {
  "Driver Details": {
   "Current Status": "ACTIVE",
-  "Holder's Name": "ANURAG BREJA",
-  "Date Of Issue": "01-Mar-2011",
+  "Holder's Name": "KARTIKAY BHUTANI",
+  "Date Of Issue": "27-Feb-2018",
   "Last Transaction At": "ZONAL OFFICE, WEST DELHI, JANAKPURI",
-  "Old / New DL No.": "DL-0420110149646"
+  "Old / New DL No.": "NA"
  },
  "Validity": {
   "Non-Transport": {
-   "from": " 01-Mar-2011",
-   "to": " 08-Feb-2026"
+   "from": " 27-Feb-2018",
+   "to": " 26-Feb-2038"
   },
   "Transport": {
    "from": " NA",
@@ -21,8 +21,13 @@
  "Class Of Vehicle": [
   {
    "COV Category": "NT",
-   "Class Of Vehicle": "ADPVEH",
-   "COV Issue Date": "01-Mar-2011"
+   "Class Of Vehicle": "LMV",
+   "COV Issue Date": "27-Feb-2018"
+  },
+  {
+   "COV Category": "NT",
+   "Class Of Vehicle": "MCWG",
+   "COV Issue Date": "27-Feb-2018"
   }
  ]
 }
