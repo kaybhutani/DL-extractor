@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from extractData import extractData
+from extractData import extractData # self creaeted package extractData.py
 url = 'https://parivahan.gov.in/rcdlstatus/?pur_cd=101'
 
 class getData:
