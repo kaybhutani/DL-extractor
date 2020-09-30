@@ -1,10 +1,21 @@
-# ERA_scan
+# Driving License Extractor
+
+This project fetches Driving License details from https://parivahan.gov.in using DL number.
 
 ## Setting up project
 
+To set up virtual environment use
+
+`virtualenv .venv`
+
+and activate it by doing
+
+`source .venv/bin/activate`
+
+To install the dependencies do:- 
+
 `pip install requirements.txt`
 
-This will install all of the dependencies.
 
 ## To get Driver Details
 
